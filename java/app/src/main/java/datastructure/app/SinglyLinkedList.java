@@ -1,22 +1,31 @@
 package datastructure.app;
 
 public class SinglyLinkedList {
-	public SinglyNode head;
+	public class Node {
+		public String data;
+		public Node next;
+
+		public Node(String data) {
+			this.data = data;
+		}
+	}
+
+	public Node head;
 
 	public void add(String data) {
 		if (this.head == null)	{
-			SinglyNode newNode = new SinglyNode(data);
+			Node newNode = new Node(data);
 
 			this.head = newNode;
 
 			return;
 		}
 
-		SinglyNode current = this.head;
+		Node current = this.head;
 
 		while(true) {
 			if (current.next == null) {
-				SinglyNode newNode = new SinglyNode(data);
+				Node newNode = new Node(data);
 
 				current.next = newNode;
 
@@ -42,7 +51,7 @@ public class SinglyLinkedList {
 			return;
 		}
 		
-		SinglyNode current = this.head;
+		Node current = this.head;
 
 		while(true) {
 			if (current.next == null) {
@@ -60,7 +69,7 @@ public class SinglyLinkedList {
 	}
 
 	public boolean get(String data) {
-		SinglyNode current = this.head;	
+		Node current = this.head;	
 
 		while(true) {
 			if (current == null) {
@@ -78,7 +87,7 @@ public class SinglyLinkedList {
 	public String get() {
 		String linkedList = "";
 
-		SinglyNode current = this.head;
+		Node current = this.head;
 
 		while(true) {
 			if (current == null) {
