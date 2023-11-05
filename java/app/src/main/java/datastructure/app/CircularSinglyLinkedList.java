@@ -1,23 +1,32 @@
 package datastructure.app;
 
 public class CircularSinglyLinkedList {
-	public SinglyNode head;
+	public class Node {
+		public String data;
+		public Node next;
+
+		public Node(String data) {
+			this.data = data;
+		}
+	}
+
+	public Node head;
 
 	public void add(String data) {
 		if (this.head == null) {
-			SinglyNode newNode = new SinglyNode(data);
+			Node newNode = new Node(data);
 
 			this.head = newNode;
 
 			return;
 		}
 
-		SinglyNode current = this.head;
+		Node current = this.head;
 
 		while(true) {
 			// caso tiver 1 elemento na lista
 			if (current.next == null) {
-				SinglyNode newNode = new SinglyNode(data);
+				Node newNode = new Node(data);
 
 				current.next = newNode;
 				current.next.next = this.head;
@@ -26,7 +35,7 @@ public class CircularSinglyLinkedList {
 			}
 
 			if (current.next == this.head) {
-				SinglyNode newNode = new SinglyNode(data);
+				Node newNode = new Node(data);
 
 				current.next = newNode;
 				current.next.next = this.head;
@@ -49,7 +58,7 @@ public class CircularSinglyLinkedList {
 		}
 
 		if (this.head.next != null && this.head.data == data) {
-			SinglyNode current = this.head;
+			Node current = this.head;
 
 			while(true) {
 				if (current.next == this.head) {
@@ -70,7 +79,7 @@ public class CircularSinglyLinkedList {
 			return;
 		}
 
-		SinglyNode current = this.head;
+		Node current = this.head;
 
 		while(true) {
 			if (current.next == this.head) {
