@@ -97,10 +97,56 @@ public class CircularSinglyLinkedList {
 	}
 
 	public boolean get(String data) {
-		return true;
+		if (this.head == null) {
+			return false;
+		}
+
+		if (this.head.data == data) {
+			return true;
+		}
+
+		Node current = this.head;	
+
+		while(true) {
+			if (current.next == this.head && current.data == data) {
+				return true;
+			}	
+
+			if (current.next == this.head && current.data != data) {
+				return false;
+			}
+
+			if (current.next.data == data) {
+				return true;
+			}
+
+			current = current.next;
+		}
 	}
 
 	public String get() {
-		return "";
+		if (this.head == null) {
+			return "";
+		}
+
+		String circularSinglyLinkedList = this.head.data + " ";
+
+		if (this.head.next == null) {
+			return circularSinglyLinkedList;
+		}
+
+		Node current = this.head.next;	
+
+		while(true) {
+			circularSinglyLinkedList += current.data + " ";
+
+			current = current.next;
+
+			if (current == this.head) {
+				break;
+			}
+		}
+
+		return circularSinglyLinkedList;
 	}
 }
