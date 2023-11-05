@@ -156,22 +156,10 @@ public class CircularSinglyLinkedListTest {
 	}
 
 	@Test
-    public void tentaAcharUmElementoNaListaVazia() {
+    public void deveTentarAcharUmElementoNaListaVazia() {
 		CircularSinglyLinkedList circularSinglyLinkedList = new CircularSinglyLinkedList();
 		
-		circularSinglyLinkedList.add("a");
-		circularSinglyLinkedList.add("b");
-		circularSinglyLinkedList.add("c");
-		circularSinglyLinkedList.add("d");
-		circularSinglyLinkedList.add("e");
-
-		circularSinglyLinkedList.remove("b");
-
-		assertEquals(circularSinglyLinkedList.head.data, "a");
-		assertEquals(circularSinglyLinkedList.head.next.data, "c");
-		SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-
-		assertEquals(singlyLinkedList.get("a"), false);
+		assertEquals(circularSinglyLinkedList.get("a"), false);
     }
 
 	@Test
@@ -181,20 +169,8 @@ public class CircularSinglyLinkedListTest {
 		circularSinglyLinkedList.add("a");
 		circularSinglyLinkedList.add("b");
 		circularSinglyLinkedList.add("c");
-		circularSinglyLinkedList.add("d");
-		circularSinglyLinkedList.add("e");
 
-		circularSinglyLinkedList.remove("b");
-
-		assertEquals(circularSinglyLinkedList.head.data, "a");
-		assertEquals(circularSinglyLinkedList.head.next.data, "c");
-		SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-
-		singlyLinkedList.add("a");
-		singlyLinkedList.add("b");
-		singlyLinkedList.add("c");
-
-		assertEquals(singlyLinkedList.get("a"), true);
+		assertEquals(circularSinglyLinkedList.get("a"), true);
     }
 
 	@Test
@@ -204,20 +180,8 @@ public class CircularSinglyLinkedListTest {
 		circularSinglyLinkedList.add("a");
 		circularSinglyLinkedList.add("b");
 		circularSinglyLinkedList.add("c");
-		circularSinglyLinkedList.add("d");
-		circularSinglyLinkedList.add("e");
 
-		circularSinglyLinkedList.remove("b");
-
-		assertEquals(circularSinglyLinkedList.head.data, "a");
-		assertEquals(circularSinglyLinkedList.head.next.data, "c");
-		SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-
-		singlyLinkedList.add("a");
-		singlyLinkedList.add("b");
-		singlyLinkedList.add("c");
-
-		assertEquals(singlyLinkedList.get("b"), true);
+		assertEquals(circularSinglyLinkedList.get("b"), true);
     }
 
 	@Test
@@ -227,62 +191,26 @@ public class CircularSinglyLinkedListTest {
 		circularSinglyLinkedList.add("a");
 		circularSinglyLinkedList.add("b");
 		circularSinglyLinkedList.add("c");
-		circularSinglyLinkedList.add("d");
-		circularSinglyLinkedList.add("e");
 
-		circularSinglyLinkedList.remove("b");
-
-		assertEquals(circularSinglyLinkedList.head.data, "a");
-		assertEquals(circularSinglyLinkedList.head.next.data, "c");
-		SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-
-		singlyLinkedList.add("a");
-		singlyLinkedList.add("b");
-		singlyLinkedList.add("c");
-
-		assertEquals(singlyLinkedList.get("c"), true);
+		assertEquals(circularSinglyLinkedList.get("c"), true);
     }
 
 	@Test
-    public void deveAcharUmElementoQueNaoEstaNaLista() {
+    public void deveTentarAcharUmElementoQueNaoEstaNaLista() {
 		CircularSinglyLinkedList circularSinglyLinkedList = new CircularSinglyLinkedList();
 		
 		circularSinglyLinkedList.add("a");
 		circularSinglyLinkedList.add("b");
 		circularSinglyLinkedList.add("c");
-		circularSinglyLinkedList.add("d");
-		circularSinglyLinkedList.add("e");
 
-		circularSinglyLinkedList.remove("b");
-
-		assertEquals(circularSinglyLinkedList.head.data, "a");
-		assertEquals(circularSinglyLinkedList.head.next.data, "c");
-		SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-
-		singlyLinkedList.add("a");
-		singlyLinkedList.add("b");
-		singlyLinkedList.add("c");
-
-		assertEquals(singlyLinkedList.get("x"), false);
+		assertEquals(circularSinglyLinkedList.get("x"), false);
     }
 
 	@Test
     public void retornaUmaListaVazia() {
 		CircularSinglyLinkedList circularSinglyLinkedList = new CircularSinglyLinkedList();
 		
-		circularSinglyLinkedList.add("a");
-		circularSinglyLinkedList.add("b");
-		circularSinglyLinkedList.add("c");
-		circularSinglyLinkedList.add("d");
-		circularSinglyLinkedList.add("e");
-
-		circularSinglyLinkedList.remove("b");
-
-		assertEquals(circularSinglyLinkedList.head.data, "a");
-		assertEquals(circularSinglyLinkedList.head.next.data, "c");
-		SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-
-		assertEquals(singlyLinkedList.get(), "");
+		assertEquals(circularSinglyLinkedList.get(), "");
     }
 
 	@Test
@@ -290,20 +218,8 @@ public class CircularSinglyLinkedListTest {
 		CircularSinglyLinkedList circularSinglyLinkedList = new CircularSinglyLinkedList();
 		
 		circularSinglyLinkedList.add("a");
-		circularSinglyLinkedList.add("b");
-		circularSinglyLinkedList.add("c");
-		circularSinglyLinkedList.add("d");
-		circularSinglyLinkedList.add("e");
 
-		circularSinglyLinkedList.remove("b");
-
-		assertEquals(circularSinglyLinkedList.head.data, "a");
-		assertEquals(circularSinglyLinkedList.head.next.data, "c");
-		SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-
-		singlyLinkedList.add("a");
-
-		assertEquals(singlyLinkedList.get(), "a ");
+		assertEquals(circularSinglyLinkedList.get(), "a ");
     }
 
 	@Test
@@ -312,20 +228,8 @@ public class CircularSinglyLinkedListTest {
 		
 		circularSinglyLinkedList.add("a");
 		circularSinglyLinkedList.add("b");
-		circularSinglyLinkedList.add("c");
-		circularSinglyLinkedList.add("d");
-		circularSinglyLinkedList.add("e");
 
-		circularSinglyLinkedList.remove("b");
-
-		assertEquals(circularSinglyLinkedList.head.data, "a");
-		assertEquals(circularSinglyLinkedList.head.next.data, "c");
-		SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-
-		singlyLinkedList.add("a");
-		singlyLinkedList.add("b");
-
-		assertEquals(singlyLinkedList.get(), "a b ");
+		assertEquals(circularSinglyLinkedList.get(), "a b ");
     }
 
 	@Test
@@ -335,19 +239,7 @@ public class CircularSinglyLinkedListTest {
 		circularSinglyLinkedList.add("a");
 		circularSinglyLinkedList.add("b");
 		circularSinglyLinkedList.add("c");
-		circularSinglyLinkedList.add("d");
-		circularSinglyLinkedList.add("e");
 
-		circularSinglyLinkedList.remove("b");
-
-		assertEquals(circularSinglyLinkedList.head.data, "a");
-		assertEquals(circularSinglyLinkedList.head.next.data, "c");
-		SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-
-		singlyLinkedList.add("a");
-		singlyLinkedList.add("b");
-		singlyLinkedList.add("c");
-
-		assertEquals(singlyLinkedList.get(), "a b c ");
+		assertEquals(circularSinglyLinkedList.get(), "a b c ");
     }
 }
